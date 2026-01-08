@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  call:
+    uses: org/ci-workflows/.github/workflows/release-with-ai-notes.yml@v1
+    with:
+      tag: ${{ github.ref_name }}
+      model: openai/gpt-4o
+      audience_language: es
