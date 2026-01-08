@@ -7,7 +7,7 @@ on:
 
 jobs:
   call:
-    uses: alexkater/reusable-workflows/.github/workflows/release-with-ai-notes.yml
+    uses: alexkater/reusable-workflows/.github/workflows/release-with-ai-notes.yml@main
     with:
       tag: ${{ github.ref_name }}
       model: openai/gpt-4o
